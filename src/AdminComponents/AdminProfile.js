@@ -10,7 +10,7 @@ function AdminProfile() {
 
             <div class="profile-card">
                 <img src={profile} alt="John" style={{ width: "100%" }} />
-                <h1 className='mt-4'>Dharani Kumar</h1>
+                <h1 className='mt-4'>Narendra prasath</h1>
                 <p className="profile-title mt-3">Full Stack Developer</p>
                 <p className='mt-2'>Guvi Institute Chennai</p>
 
