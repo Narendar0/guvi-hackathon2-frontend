@@ -13,7 +13,7 @@ function MoviesList() {
 
     let fetchMovies = async () => {
         try {
-            let allMovies = await axios.get("http://localhost:3000/movies")
+            let allMovies = await axios.get("https://guvi-hackathon2-backend2.herokuapp.com/movies")
             setMovieList(allMovies.data)
         } catch (error) {
             console.log(error)
@@ -24,8 +24,7 @@ function MoviesList() {
         try {
             let result = window.confirm("Are you sure want to delete?")
             if (result) {
-                await axios.delete(`http://localhost:3000/movies/${id}`)
-                window.location.reload();
+                await axios.delete(`https://guvi-hackathon2-backend2.herokuapp.com/movies/${id}`)
                 fetchMovies();
             }
         } catch (error) {

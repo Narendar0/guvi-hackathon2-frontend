@@ -18,6 +18,7 @@ import EditMovie from './AdminComponents/EditMovie';
 import UserMoviesList from './UserComponents/UserMovieList';
 import AdminProfile from './AdminComponents/AdminProfile';
 import BookTicket from './UserComponents/BookTicket';
+import BookingStatus from './UserComponents/BookingStatus';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       <Route path="/userdashboard" element={<UserDashboard/>}/>
       <Route path="/usermovielist" element={<UserMoviesList/>}/>
       <Route path="/book-ticket" element={<BookTicket/>}/>
+      <Route path="/bookingstatus" element={<BookingStatus/>}/>
 
     </Routes> 
   </BrowserRouter>

@@ -9,7 +9,7 @@ function EditTheater() {
     const navigate = useNavigate()
     useEffect(async () => {
         try {
-            let userData = await axios.get(`http://localhost:3000/theaters/${params.id}`)
+            let userData = await axios.get(`http://guvi-hackathon2-backend2.herokuapp.com/theaters/${params.id}`)
             formik.setValues(userData.data)
         } catch (error) {
             console.log(error)
@@ -27,7 +27,7 @@ function EditTheater() {
         onSubmit: async (values) => {
             delete values._id;
             try {
-                await axios.put(`http://localhost:3000/theaters/${params.id}`,values)
+                await axios.put(`http://guvi-hackathon2-backend2.herokuapp.com/${params.id}`,values)
             navigate("/admindashboard")
               } catch (error) {
                 console.log(error)

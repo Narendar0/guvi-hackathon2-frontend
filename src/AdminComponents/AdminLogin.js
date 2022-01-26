@@ -5,7 +5,7 @@ function AdminLogin() {
   const navigate = useNavigate()
     const formik = useFormik({
         initialValues: {
-          email: 'admimdk123@gmail.com',
+          email: 'adminnp123@gmail.com',
           password : '123456'
         },
         onSubmit: async (values) => {

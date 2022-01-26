@@ -7,7 +7,7 @@ function UserDashboard() {
     const [theaterList, setTheaterList] = useState([])
     useEffect(async () => {
         try {
-            let dashboard = await axios.get("http://localhost:3000/userdashboard", {
+            let dashboard = await axios.get("https://guvi-hackathon2-backend2.herokuapp.com/userdashboard", {
                 headers: {
                     Authorization: window.localStorage.getItem("my_token")
                 }
@@ -25,7 +25,7 @@ function UserDashboard() {
 
     let fetchTheaters = async () => {
         try {
-            let allTheaters = await axios.get("http://localhost:3000/theaters")
+            let allTheaters = await axios.get("https://guvi-hackathon2-backend2.herokuapp.com/theaters")
             setTheaterList(allTheaters.data)
         } catch (error) {
             console.log(error)
@@ -63,6 +63,14 @@ function UserDashboard() {
                             aria-expanded="true" aria-controls="collapseTwo">
                             <i class="fas fa-fw fa-film"></i>
                             <span>Movie List</span>
+                        </Link>
+                    </li>
+
+                    <li class="nav-item">
+                        <Link class="nav-link collapsed" to={"/bookingstatus"} data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="true" aria-controls="collapseTwo">
+                            <i class="fas fa-book"></i>
+                            <span>Booking Status</span>
                         </Link>
                     </li>
 

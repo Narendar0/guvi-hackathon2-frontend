@@ -12,7 +12,7 @@ function AdminDashboard() {
 
     let fetchTheaters = async () => {
         try {
-            let allTheaters = await axios.get("http://localhost:3000/theaters")
+            let allTheaters = await axios.get("https://guvi-hackathon2-backend2.herokuapp.com/theaters")
             setTheaterList(allTheaters.data)
         } catch (error) {
             console.log(error)
@@ -23,8 +23,7 @@ function AdminDashboard() {
         try {
             let result = window.confirm("Are you sure want to delete?")
             if (result) {
-                await axios.delete(`http://localhost:3000/theaters/${id}`)
-                window.location.reload();
+                await axios.delete(`https://guvi-hackathon2-backend2.herokuapp.com/theaters/${id}`)
                 fetchTheaters();
             }
         } catch (error) {

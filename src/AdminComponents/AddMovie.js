@@ -15,7 +15,7 @@ function AddMovie() {
         onSubmit: async (values) => {
     
           try {
-           await axios.post("http://localhost:3000/create-movies", values)
+           await axios.post("http://https://guvi-hackathon2-backend2.herokuapp.com/create-movies", values)
             navigate("/movielist")
           } catch (error) {
             console.log(error)

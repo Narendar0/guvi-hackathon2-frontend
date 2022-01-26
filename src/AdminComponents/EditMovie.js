@@ -9,7 +9,7 @@ function EditMovie() {
     const navigate = useNavigate()
     useEffect(async () => {
         try {
-            let movieData = await axios.get(`http://localhost:3000/movies/${params.id}`)
+            let movieData = await axios.get(`https://guvi-hackathon2-backend2.herokuapp.com/movies/${params.id}`)
             formik.setValues(movieData.data)
         } catch (error) {
             console.log(error)
@@ -28,7 +28,7 @@ function EditMovie() {
         onSubmit: async (values) => {
             delete values._id;
             try {
-                await axios.put(`http://localhost:3000/movies/${params.id}`,values)
+                await axios.put(`https://guvi-hackathon2-backend2.herokuapp.com/movies/${params.id}`,values)
             navigate("/movielist")
               } catch (error) {
                 console.log(error)
