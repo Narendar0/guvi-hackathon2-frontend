@@ -14,7 +14,7 @@ function BookTicket() {
                     <span className="sub-title ">One Ticket Cost : 300</span>
                     <br />
                     <div className="inputForm mt-3">
-                        <input type="number" placeholder="Enter Number Of Ceats" className="ml-3"/>
+                        <input type="number" placeholder="Enter Number Of Seats" className="ml-3"/>
                         <input type="time" placeholder="Show Time" className="ml-3"/>
                         </div>
                     </div>
