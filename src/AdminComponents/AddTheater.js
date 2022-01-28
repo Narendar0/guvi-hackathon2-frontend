@@ -14,7 +14,7 @@ function AddTheater() {
     onSubmit: async (values) => {
 
       try {
-        await axios.post("http://guvi-hackathon2-backend2.herokuapp.com/create-theaters", values)
+        await axios.post("https://guvi-hackathon2-backend2.herokuapp.com/create-theaters", values)
         navigate("/admindashboard")
       } catch (error) {
         console.log(error)
