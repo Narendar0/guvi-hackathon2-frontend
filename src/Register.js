@@ -17,7 +17,7 @@ function Register() {
     },
     onSubmit : async (values) => {
        try {
-           await axios.post("http://guvi-hackathon2-backend2.herokuapp.com/register",values)
+           await axios.post("https://guvi-hackathon2-backend2.herokuapp.com/register",values)
            navigate("/")
        } catch (error) {
            console.log(error)
