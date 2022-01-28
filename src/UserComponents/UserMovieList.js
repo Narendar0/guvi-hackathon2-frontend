@@ -14,7 +14,7 @@ function UserMoviesList() {
 
   let fetchMovies = async () => {
       try {
-          let allMovies = await axios.get("http://guvi-hackathon2-backend2.herokuapp.com/movies")
+          let allMovies = await axios.get("https://guvi-hackathon2-backend2.herokuapp.com/movies")
           setMovieList(allMovies.data)
       } catch (error) {
           console.log(error)
